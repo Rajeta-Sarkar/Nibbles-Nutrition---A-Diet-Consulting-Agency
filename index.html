@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Control</title>
+    <link rel="stylesheet" href="diet_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet"></link>
+
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="logo_consultation.png" width="250" height="150"> </a>
+            <div class = "nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">HEALTH EXPERTS</a></li>
+                    <li><a href="">CALORIE TRACKER</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>A Diet Consulting Platform</h1>
+            <p>Achive long term wellness by making your diet enriched<br>with all the nutrition essensial for the human body.</p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </section>
+
+    <!----health experts---->
+    <section class="experts">
+        <h1>Meet the Health Experts</h1>
+        <p>These health experts are celebrity nutritionists who are very well versed with the art of nutritions science. They also coach the players and help them maintain good performance while their game.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <img src="rujuta.jpg" alt="" class="image">
+            <h3>Rujuta Diwekar</h3>
+            <p>India's leading nutrition and exercise science expert, Rujuta Diwekar is a vocal champion of using our common sense and un - complicating the act of eating.</p>
+        </div>
+        <div class="course-col">
+            <img src="ryan.jpg" alt="" class="image">
+            <h3>Ryan Fernando</h3>
+            <p>As India's leading nutritionist with over two decades guiding athletes, film stars and daily office warriors. Have accumulated a wealth of nutrition expertise.</p>
+        </div>
+        <div class="course-col">
+            <img src="pooja.jpg" alt="" class="image">
+            <h3>Pooja Makhija</h3>
+            <p>A nutritionist, functional practitioner, author and entrepreneur. Have transformed the bodies and lives of thousands of people from all walks of life.</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="counter">
+        <h1>Calorie Consumption Calculator</h1>
+        <p>This calculator helps you to check the amount of your daily calorie intake.</p>
+        <div class="container" id="calculator">
+            <form class="CalculateForm" method="post">
+                <div class="card bg-dark text-white">
+                    <h4 class="text-center text-danger card-header mb-4">Calorie Calculator</h4>
+                    <div class="card-body">
+                        <div class="row g-5">
+                            <div class="col-sm-4">
+                                <div>
+                                    <h5>Age*</h5>
+                                    <input class="form-control text-end" name="age" required="" type="number" value="25" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div>
+                                    <h5>Gender*</h5>
+                                    <div class="form-control">
+                                        <div class="row">
+                                            <div class="col-6 d-flex align-items-center">
+                                                <input checked="" id="gender_male" name="gender" required="" type="radio" value="0" />
+                                                <label class="ms-2">Male</label>
+                                            </div>
+                                            <div class="col-6 d-flex align-items-center">
+                                                <input id="gender_female" name="gender" required="" type="radio" value="1" />
+                                                <label class="ms-2">Female</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div>
+                                    <h5>Body Fat*</h5>
+                                    <div class="d-flex align-items-center">
+                                        <input class="form-control text-end" name="bodyFat" required="" type="number" value="20" />
+                                        <span class="btn ms-1 bg-warning">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <h5>Height*</h5>
+                                    <div class="d-flex align-items-center">
+                                        <input class="form-control text-end" name="height" required="" type="number" value="180" />
+                                        <span class="btn ms-1 bg-warning text-nowrap">cm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <h5>Weight*</h5>
+                                    <div class="d-flex align-items-center">
+                                        <input class="form-control text-end" name="weight" required="" type="number" value="65" />
+                                        <span class="btn ms-1 bg-warning text-nowrap">kg</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h5>Activity*</h5>
+                                <select class="form-select" name="activity" required="">
+                                    <option value="1">Basal Metabolic Rate (BMR)</option>
+                                    <option value="1.2">Sedentary: little or no exercise</option>
+                                    <option value="1.375">Light: exercise 1-3 times/week</option>
+                                    <option selected="" value="1.465">Moderate: exercise 4-5 times/week</option>
+                                    <option value="1.55">Active: daily exercise or intense exercise 3-4 times/week</option>
+                                    <option value="1.725">Very Active: intense exercise 6-7 times/week</option>
+                                    <option value="1.9">Extra Active: very intense exercise daily, or physical job</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <h5>Result Unit*</h5>
+                                    <div class="form-control">
+                                        <div class="row">
+                                            <div class="col-6 d-flex align-items-center">
+                                                <input checked="" id="unit_calories" name="unit" required="" type="radio" value="Calories" />
+                                                <label class="ms-2">Calories</label>
+                                            </div>
+                                            <div class="col-6 d-flex align-items-center">
+                                                <input id="unit_kilo" name="unit" required="" type="radio" value="kilojoules" />
+                                                <label class="ms-2">kilojoules</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <h5>BMR estimation formula*</h5>
+                                    <div class="row g-3">
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <input checked="" id="Mifflin_St_Jeor" name="formula" required="" type="radio" value="0" />
+                                            <label class="ms-2">Mifflin St Jeor</label>
+                                        </div>
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <input id="Revised_Harris_Benedict" name="formula" required="" type="radio" value="1" />
+                                            <label class="ms-2">Revised Harris-Benedict</label>
+                                        </div>
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <input id="Katch_McArdle" name="formula" required="" type="radio" value="2" />
+                                            <label class="ms-2">Katch-McArdle</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ans_calculate"></div>
+                    <div class="text-center mt-4 card-footer">
+                        <button class="btn btn-success" onclick="calculateCalorie(this)" type="button">
+                            <i class="fas fa-calculator me-3"></i>
+                            Calculate
+                        </button>
+                    </div>
+                </div>
+        </div>
+        <script>
+            function calculateCalorie(obj)
+            {
+                const age = obj.form.age.value;
+                const gender = obj.form.gender.value;
+                const bodyFat = obj.form.bodyFat.value;
+                const height = obj.form.height.value;
+                const weight = obj.form.weight.value;
+                const activity = obj.form.activity.value;
+                const unit = obj.form.unit.value;
+                const formula = obj.form.formula.value;
+
+                let BMR = '';
+                if(formula == 0) // Mifflin
+                {
+                    BMR = Mifflin(gender, age, bodyFat, height, weight);
+                }
+                else if(formula == 1) // Harris
+                {
+                    BMR = Harris(gender, age, bodyFat, height, weight);
+                }
+                else if(formula == 2) // Katch
+                {
+                    BMR = Katch(bodyFat, weight);
+                }
+
+                let ret = parseFloat(BMR)*parseFloat(activity);
+                if(unit == 'kilojoules')
+                {
+                    ret = (ret*4.1868);
+                }
+
+                document.querySelector(".ans_calculate").innerHTML = '<div class="container"><h4 class="text-center form-control my-3 text-danger fs-4">You should consume <span style="color:black" >'+Math.ceil(ret)+' '+unit+'/day </span> of calorie to maintain your weight.</h4></div>';
+            }
+
+            function Mifflin(gender, age, bodyFat, height, weight)
+            {
+                let BMR = (10*weight) + (6.25*height) - (5*age) + 5;
+                if(gender == 1) // Female
+                {
+                    BMR = (10*weight) + (6.25*height) - (5*age) - 161;
+                }
+
+                return BMR;
+            }
+
+            function Harris(gender, age, bodyFat, height, weight)
+            {
+                let BMR = (13.397*weight) + (4.799*height) - (5.677*age) + 88.362;
+                if(gender == 1) // Female
+                {
+                    BMR = (9.247*weight) + (3.098*height) - (4.330*age) + 447.593;
+                }
+
+                return BMR;
+            }
+
+            function Katch(bodyFat, weight)
+            {
+                let BMR = 370 + 21.6*(1 - (bodyFat/100))*weight;
+
+                return BMR;
+            }
+        </script>
+    
+    </section>
+      
+    <section class="programs">
+        <h1>Programs We Offer</h1>
+        <p>We offer a wide range of programs starting from weight maitainance to weight loss to weight gain.</p>
+        <div class="row">
+            <div class="prog-col">
+                <img src="loseweight.jpg" alt="" class="image_two">
+                <h3>Weight Loss</h3>
+                <p>To lose weight include healthy eating and choose carbs carefully.</p>
+            </div>
+            <div class="prog-col">
+                <img src="maintain.jpg" alt="" class="image_two">
+                <h3>Weight Maintenance</h3>
+                <p>A healthy diet and a active lifestyle is required to maintain the weight.</p>
+            </div>
+            <div class="prog-col">
+                <img src="gainweight.jpg" alt="" class="image_two">
+                <h3>Weight Gain</h3>
+                <p>To gain weight, you need to eat more calories than your body burns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!----- Call to Action ----->
+    <section class="cta">
+        <h1>Enroll for out variour online courses<br>anywhere from the world</h1>
+        <a href="" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!----- Footer ----->
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>We are the leading nutrition platform who has helped a lot of people all around the globe to achieve their desired results.</p>
+        <div class="icons">
+           <img src="contact.jpg" alt="" class="contact">
+        </div>
+        <p> &#169; copyright</p>
+    </section>
+    
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="DietitianBot"
+  agent-id="e41e67d7-c322-4eac-9d11-4a55fc895f61"
+  language-code="en"
+></df-messenger>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
